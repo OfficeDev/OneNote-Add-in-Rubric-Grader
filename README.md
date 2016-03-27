@@ -88,7 +88,7 @@ C:\<local path>\onenote-add-in\> gulp serve-static
 ### Troubleshooting and tips 
 - You can debug the add-in using your browser's developer tools. When you're using the Gulp static server and debugging in Internet Explorer or Chrome, you can save your changes locally and then just refresh the add-in's iFrame.
 
-- When you inspect a OneNote object, the properties that are currently available for use display actual values. Properties that need to be loaded display *undefined*. Expand the **%5Fproto%5F** node to see properties that are defined on the object but are not yet loaded.
+- When you inspect a OneNote object, the properties that are currently available for use display actual values. Properties that need to be loaded display *undefined*. Expand the `_proto_` node to see properties that are defined on the object but are not yet loaded.
 
    ![Unloaded OneNote object in the debugger](readme-images/debug.png)
 
