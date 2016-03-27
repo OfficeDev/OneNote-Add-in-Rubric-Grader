@@ -11,12 +11,14 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 ## Prerequisites
 - A test notebook from the OneNote team. See ///topic link currently not known/// for more information about developing OneNote add-ins during the initial preview period.
 
-- Microsoft Office Project Generator (Office Generator) and its prerequisites ([Node.js](https://nodejs.org), [npm](https://www.npmjs.com/), [Bower](http://bower.io/)). Installation instructions are in [this article](https://dev.office.com/blogs/creating-office-add-ins-with-any-editor-introducing-yo-office). 
+- [Node.js](https://nodejs.org)
 
-   >You'll need the Office Generator to follow the instructions in this article, but you can download the project and host your website however you'd like. Learn more [here](#self-host).
+- [Microsoft Office Add-in Generator](https://github.com/OfficeDev/generator-office). To install the generator and its prerequisites ([Bower](http://bower.io/), [Yeoman](http://yeoman.io/), [Gulp](http://gulpjs.com/), and [TSD](http://definitelytyped.org/tsd)), open a Node.js command prompt and run `npm install -g bower yo generator-office gulp tsd`. See the [detailed installation instructions](https://code.visualstudio.com/Docs/runtimes/office).
 
-## Office Generator
-Using Office Generator makes it easy to create add-in projects when you don't have Visual Studio installed, or when you want quick access to a Gulp static server for testing. 
+   >You need the Office Add-in Generator to follow the instructions in this article, but you can download the sample and host the contents of the **app** folder on any website. Update the manifest file to point the **SourceLocation** to **grader.html** on your website.
+
+## Office Add-in Generator
+Using Office Generator makes it easy to create add-in projects when you don't have Visual Studio installed, or want to use technologies other than plain HTML, CSS & JavaScript. It also provides quick access to a Gulp static server for testing. 
  
 Office Generator creates a lot of files for add-in projects. Most of these files aren't stored in the sample repository on GitHub, so you'll generate a local project and then overwrite some local files with sample files. 
 
@@ -40,8 +42,6 @@ C:\<local path>\onenote-add-in\> yo office
    | Office project type | Task Pane Add-in |
    | Technology to use | HTML, CSS & JavaScript |
    | Supported Office applications | Any Office product (we'll add a OneNote host later) |
-
-   ![Options to create the project in Office Generator](readme-images/yo-office.png)
 
 4. Open manifest-onenote-add-in.xml from your project files using any text editor.
    a. Add the following line to the **Hosts** section.
@@ -71,13 +71,13 @@ C:\<local path>\onenote-add-in\> gulp serve-static
 
 2. Create a couple pages in the current section. On one page, add a paragraph of content.
 
-   >This sample expects the page content to be in one outline. You can click on your content in the OneNote page to display the border of the outline.
+   >This sample expects the page content to be in one outline. You can click your content in the OneNote page to display the outline border.
 
 3. Open the OneNote Online notebook that the OneNote team created for you. Choose **Insert > Upload Add-in**. 
 
    ![Upload Add-in dialog](readme-images/insert-add-ins.png)
 
-4. Choose manifest-onenote-add-in.xml in your project files, and then choose **Upload**. While testing, the manifest file can be stored locally.
+4. Navigate to **manifest-onenote-add-in.xml** in your project files, and then choose **Upload**. While testing, the manifest file can be stored locally.
 
 5. The add-in opens in an iFrame next to the OneNote page. 
    - Use the **Get stats** button to get approximate word and sentence counts. 
@@ -86,9 +86,13 @@ C:\<local path>\onenote-add-in\> gulp serve-static
 
 #### Tips 
 - You can debug the add-in using your browser's developer tools. When you're using the Gulp static server and debugging in Internet Explorer or Chrome, you can save your changes locally and then just refresh the add-in's iFrame.
+
 - When you inspect a OneNote object, the properties that are currently available for use display actual values. Properties that need to be loaded display *undefined*. Expand the **_proto_** node to see properties that are defined on the object but not yet loaded.
+
+   ![Unloaded OneNote object in the debugger](readme-images/debug.png)
+
 - You need to enable mixed content in the browser if your add-in uses any HTTP resources. Production add-ins should use only secure HTTPS resources.
 
 ## Learn more
 <onenote links to come>
-- 
+- [Office Add-ins](https://msdn.microsoft.com/library/office/jj220082.aspx)
