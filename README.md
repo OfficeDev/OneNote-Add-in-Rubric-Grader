@@ -13,7 +13,7 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 
 - [Node.js](https://nodejs.org)
 
-- [Microsoft Office Add-in Generator](https://github.com/OfficeDev/generator-office). To install the generator and its prerequisites ([Bower](http://bower.io/), [Yeoman](http://yeoman.io/), [Gulp](http://gulpjs.com/), and [TSD](http://definitelytyped.org/tsd)), open a Node.js command prompt and run `npm install -g bower yo generator-office gulp tsd`. See the [detailed installation instructions](https://code.visualstudio.com/Docs/runtimes/office).
+- [Microsoft Office Add-in Generator](https://github.com/OfficeDev/generator-office). To install the generator and its prerequisites ([Bower](http://bower.io/), [Yeoman](http://yeoman.io/), [Gulp](http://gulpjs.com/), and [TSD](http://definitelytyped.org/tsd)), open a Node.js command prompt and run `npm install -g bower yo generator-office gulp tsd`. See [detailed installation instructions](https://code.visualstudio.com/Docs/runtimes/office).
 
 ### Using the Office Add-in Generator 
 The Office Add-in Generator makes it easy to create add-in projects when you don't have Visual Studio installed, or want to use technologies other than plain HTML, CSS, and JavaScript. It also provides quick access to a Gulp static server for testing. 
@@ -23,7 +23,7 @@ The Office Add-in Generator makes it easy to create add-in projects when you don
 ## Download the sample
 1. Clone or download the [OneNote-Add-in-Rubric-Grader-Preview](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview) repository. 
 
-   Office Generator creates a lot of files for add-in projects. Most of these files aren't stored in the sample repository on GitHub, so you'll generate a local project and then overwrite some local files with files from the sample. 
+   The Office Add-in Generator creates a lot of files for add-in projects. Most of these files aren't stored in the sample repository on GitHub, so you'll generate a local project and then overwrite some local files with files from the sample. 
 
 ## Create and configure the add-in project 
 1. Create a local folder named *onenote-add-in*.
@@ -31,7 +31,7 @@ The Office Add-in Generator makes it easy to create add-in projects when you don
 2. Open a **cmd** prompt and navigate to the **onenote-add-in** folder. Run the `yo office` command, as shown below.
 
    ```
-C:\<local path>\onenote-add-in\> yo office
+C:\your-local-path\onenote-add-in\> yo office
    ```
 
 3. Use the following options to create the project.
@@ -47,7 +47,7 @@ C:\<local path>\onenote-add-in\> yo office
 
 5. Copy the **app** folder from the sample files into your **onenote-add-in** folder to replace the one you just deleted.
 
-6. Open *manifest-onenote-add-in.xml** in your project files using any text editor.
+6. Open **manifest-onenote-add-in.xml** in your project files using any text editor.
 
    a. Add the following line to the **Hosts** section.
 
@@ -65,7 +65,7 @@ C:\<local path>\onenote-add-in\> yo office
 1. Open a **cmd** prompt and navigate to the **onenote-add-in** folder. Run the `gulp serve-static` command, as shown below.
 
    ```
-C:\<local path>\onenote-add-in\> gulp serve-static
+C:\your-local-path\onenote-add-in\> gulp serve-static
    ```
 
    You'll need to trust the self-signed certificates that are included with the web server so you don't get warnings from the browser.
@@ -90,7 +90,7 @@ C:\<local path>\onenote-add-in\> gulp serve-static
 
 - When you inspect a OneNote object, the properties that are currently available for use display actual values. Properties that need to be loaded display *undefined*. Expand the `_proto_` node to see properties that are defined on the object but are not yet loaded.
 
-   ![Unloaded OneNote object in the debugger](readme-images/debug.png)
+      ![Unloaded OneNote object in the debugger](readme-images/debug.png)
 
 - You need to enable mixed content in the browser if your add-in uses any HTTP resources. Production add-ins should use only secure HTTPS resources.
 
