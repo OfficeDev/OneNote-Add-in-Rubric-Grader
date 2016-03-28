@@ -57,13 +57,9 @@
                     // Transform the <select> control to an Office UI Fabric dropdown.
                     useFabricDropdown('page-picker-wrapper');
                 })
-                .catch(function (error) {
-                    app.showNotification("Error: " + error);
-                    console.log("Error: " + error);
-                    if (error instanceof OfficeExtension.Error) {
-                        console.log("Debug info: " + JSON.stringify(error.debugInfo));
-                    }
-                });
+                .catch(function(error) {
+                    onError(error);
+                }); 
         });
     }
     
@@ -104,14 +100,10 @@
                     var sentences = textContent.split('. ');                    
                     $('#wordCount').text('Words: ' + words.length);
                     $('#sentenceCount').text('Sentences: ' + sentences.length);
-                })
-                .catch(function (error) {
-                    app.showNotification("Error: " + error);
-                    console.log("Error: " + error);
-                    if (error instanceof OfficeExtension.Error) {
-                        console.log("Debug info: " + JSON.stringify(error.debugInfo));
-                    }
-                })
+                })                
+                .catch(function(error) {
+                    onError(error);
+                }); 
             });
     }
        
@@ -127,13 +119,9 @@
             
             // Run the queued commands, and return a promise to indicate task completion.
             return context.sync()
-                .catch(function (error) {
-                    app.showNotification("Error: " + error);
-                    console.log("Error: " + error);
-                    if (error instanceof OfficeExtension.Error) {
-                        console.log("Debug info: " + JSON.stringify(error.debugInfo));
-                    }
-                })
+                .catch(function(error) {
+                    onError(error);
+                }); 
             });
     }
     
@@ -167,17 +155,13 @@
                     // Run the queued command.
                     return context.sync();
                 })
-                .catch(function (error) {
-                    app.showNotification("Error: " + error);
-                    console.log("Error: " + error);
-                    if (error instanceof OfficeExtension.Error) {
-                        console.log("Debug info: " + JSON.stringify(error.debugInfo));
-                    }
+                .catch(function(error) {
+                    onError(error);
                 }); 
         });
     }
     
-    ///* Helpers and UI only *///
+    ///* UI only and helpers *///
                   
     // Populates the scoring dropdowns with the score values.
     function populateScoringDropDowns() {
@@ -241,4 +225,13 @@
         $('#sentenceCount').text('Sentences:');
     }
        
+    // Handle errors.
+    function onError(error) {
+        app.showNotification("Error: " + error);
+        console.log("Error: " + error);
+        if (error instanceof OfficeExtension.Error) {
+            console.log("Debug info: " + JSON.stringify(error.debugInfo));
+        }
+    }   
+    
 })();

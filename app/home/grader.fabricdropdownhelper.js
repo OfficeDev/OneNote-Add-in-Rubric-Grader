@@ -3,7 +3,8 @@
 * See LICENSE in the project root for license information. 
 */ 
 
-// Office UI Fabric dropdown helper.
+// Helper based on Office UI Fabric dropdown, which hides the original 'select' dropdown and 
+// creates a "fake" dropdown that can be more easily styled across browsers.
 // http://dev.office.com/fabric/components/dropdown
 function useFabricDropdown (id) {
     var $dropdownWrapper = $('#' + id),
