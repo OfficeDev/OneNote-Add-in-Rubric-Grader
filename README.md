@@ -13,7 +13,7 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 
 - [Node.js](https://nodejs.org)
 
-- [Microsoft Office Add-in Generator](https://github.com/OfficeDev/generator-office). To install the generator and its prerequisites ([Bower](http://bower.io/), [Yeoman](http://yeoman.io/), [Gulp](http://gulpjs.com/), and [TSD](http://definitelytyped.org/tsd)), open a Node.js command prompt and run `npm install -g bower yo generator-office gulp tsd`. See [detailed installation instructions](https://code.visualstudio.com/Docs/runtimes/office).
+- [Microsoft Office Add-in Generator](https://github.com/OfficeDev/generator-office). To install the generator and its prerequisites ([Bower](http://bower.io/), [Yeoman](http://yeoman.io/), [Gulp](http://gulpjs.com/), and [TSD](http://definitelytyped.org/tsd)), open a Node.js command prompt and run `npm install -g bower yo generator-office gulp tsd`. See the [detailed installation instructions](https://code.visualstudio.com/Docs/runtimes/office).
 
 ### Using the Office Add-in Generator 
 The Office Add-in Generator makes it easy to create add-in projects when you don't have Visual Studio installed, or want to use technologies other than plain HTML, CSS, and JavaScript. It also provides quick access to a Gulp static server for testing. 
@@ -23,7 +23,7 @@ The Office Add-in Generator makes it easy to create add-in projects when you don
 ## Download the sample
 1. Clone or download the [OneNote-Add-in-Rubric-Grader-Preview](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview) repository. 
 
-   The Office Add-in Generator creates a lot of files for add-in projects. Most of these files aren't stored in the sample repository on GitHub, so you'll generate a local project and then overwrite some local files with files from the sample. 
+   The Office Add-in Generator creates a lot of supporting files for add-in projects. Most of these files aren't stored in the sample repository on GitHub, so you'll generate a local project and then overwrite some local files with files from the sample. 
 
 ## Create and configure the add-in project 
 1. Create a local folder named *onenote-add-in*.
@@ -43,7 +43,7 @@ C:\your-local-path\onenote-add-in\> yo office
    | Technology to use | HTML, CSS & JavaScript |
    | Supported Office applications | Any Office product (we'll add a OneNote host later) |
 
-4. After the new project is created, delete the **app** folder.
+4. After the new project is created, delete the **app** folder that was created in the project files.
 
 5. Copy the **app** folder from the sample files into your **onenote-add-in** folder to replace the one you just deleted.
 
