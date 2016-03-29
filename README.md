@@ -9,16 +9,18 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 ![Rubric Grader task pane add-in in OneNote Online](readme-images/rubric-grader.png) 
 
 ## Prerequisites
-- A test notebook from the OneNote team. See ///topic link currently not known/// for more information about developing OneNote add-ins during the initial preview period.
+- A test notebook from the OneNote team. See [Getting started with OneNote add-ins (Preview)] for more information about developing OneNote add-ins during the initial preview period.
 
-- [Node.js](https://nodejs.org)
+- Git. Install it from [https://git-scm.com/download](https://git-scm.com/download).
 
-- [Microsoft Office Add-in Generator](https://github.com/OfficeDev/generator-office). To install the generator and its prerequisites ([Bower](http://bower.io/), [Yeoman](http://yeoman.io/), [Gulp](http://gulpjs.com/), and [TSD](http://definitelytyped.org/tsd)), open a Node.js command prompt and run `npm install -g bower yo generator-office gulp tsd`. See the [detailed installation instructions](https://code.visualstudio.com/Docs/runtimes/office).
+- Node.js. Install it from [https://nodejs.org](https://nodejs.org).
+
+- Yeoman Office Add-in generator. To install the generator and its prerequisites, follow the [installation instructions](https://code.visualstudio.com/Docs/runtimes/office).
 
 ### Using the Office Add-in Generator 
 The Office Add-in Generator makes it easy to create add-in projects when you don't have Visual Studio installed, or want to use technologies other than plain HTML, CSS, and JavaScript. It also provides quick access to a Gulp static server for testing. 
  
->You need the Office Add-in Generator to follow the instructions in this article, but you can download the sample and host the contents of the **app** folder on any website. Update the manifest file by adding `<Host Name="Notebook">` to the **Hosts** section, and pointing **SourceLocation** to the **grader.html** file on your website.
+>You need the Office Add-in Generator to follow the instructions in this article. However, you can download the sample and host the contents of the **app** folder on any website. Update the manifest file by pointing **SourceLocation** to the **grader.html** file on your website.
 
 ## Download the sample
 1. Clone or download the [OneNote-Add-in-Rubric-Grader-Preview](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview) repository. 
@@ -39,9 +41,10 @@ C:\your-local-path\onenote-add-in\> yo office
    | Option | Value |
    |:------|:------|
    | Project name | OneNote Add-in |
+   | Root folder of project | (accept the default) |
    | Office project type | Task Pane Add-in |
+   | Supported Office applications | (choose any--we'll add a OneNote host later) |
    | Technology to use | HTML, CSS & JavaScript |
-   | Supported Office applications | Any Office product (we'll add a OneNote host later) |
 
 4. After the new project is created, delete the **app** folder that was created in the project files.
 
