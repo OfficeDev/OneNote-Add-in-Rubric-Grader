@@ -9,7 +9,7 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 ![Rubric Grader task pane add-in in OneNote Online](readme-images/rubric-grader.png) 
 
 ## Prerequisites
-- A test notebook from the OneNote team. See [Getting started with OneNote add-ins (Preview)] for more information about developing OneNote add-ins during the initial preview period.
+- A test notebook from the OneNote team. See [Getting started with OneNote add-ins (Preview)] for more information about developing OneNote add-ins during the initial, limited preview period.
 
 - Git. Install it from [https://git-scm.com/download](https://git-scm.com/download).
 
@@ -55,7 +55,7 @@ C:\your-local-path\onenote-add-in\> yo office
    a. Add the following line to the **Hosts** section.
 
    ```xml
-<Host Name="Notebook">
+<Host Name="Notebook" />
    ```
 
    b. In the **DefaultSettings** section, change the **SourceLocation** element from  `home.html` to `grader.html`, as shown below.
@@ -98,5 +98,5 @@ C:\your-local-path\onenote-add-in\> gulp serve-static
 - You need to enable mixed content in the browser if your add-in uses any HTTP resources. Production add-ins should use only secure HTTPS resources.
 
 ## Learn more
-<onenote links to come>
+
 - [Office Add-ins](https://msdn.microsoft.com/library/office/jj220082.aspx)
