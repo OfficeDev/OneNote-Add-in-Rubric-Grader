@@ -9,25 +9,20 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 ![Rubric Grader task pane add-in in OneNote Online](readme-images/rubric-grader.png) 
 
 ## Prerequisites
-- A test notebook from the OneNote team. See [Getting started with OneNote add-ins (Preview)] for more information about developing OneNote add-ins during the initial, limited preview period.
+- A test notebook from the OneNote team. See [OneNote add-ins JavaScript programming overview (Preview)]() for more information about developing OneNote add-ins during the initial, limited preview period.
 
-- Git. Install it from [https://git-scm.com/download](https://git-scm.com/download).
+- Yeoman Office generator. To install the generator and its prerequisites, follow the  [installation instructions](https://dev.office.com/docs/add-ins/get-started/create-an-office-add-in-using-any-editor).
 
-- Node.js. Install it from [https://nodejs.org](https://nodejs.org).
+   The Yeoman Office generator makes it easy to create add-in projects when you don't have Visual Studio or you want to use technologies other than plain HTML, CSS, and JavaScript. It also provides quick access to a local Gulp web server for testing. 
 
-- Yeoman Office Add-in generator. To install the generator and its prerequisites, follow the [installation instructions](https://code.visualstudio.com/Docs/runtimes/office).
+   >You can optionally [use Visual Studio](https://dev.office.com/docs/add-ins/get-started/create-and-debug-office-add-ins-in-visual-studio) to create your project files and host the contents of the **app** folder on any website. Skip Step 2 below, and point **SourceLocation** to the **grader.html** file on your website in Step 3.
 
-### Using the Office Add-in Generator 
-The Office Add-in Generator makes it easy to create add-in projects when you don't have Visual Studio installed, or want to use technologies other than plain HTML, CSS, and JavaScript. It also provides quick access to a Gulp static server for testing. 
- 
->You need the Office Add-in Generator to follow the instructions in this article. However, you can download the sample and host the contents of the **app** folder on any website. Update the manifest file by pointing **SourceLocation** to the **grader.html** file on your website.
-
-## Download the sample
+## Step 1: Download the sample
 1. Clone or download the [OneNote-Add-in-Rubric-Grader-Preview](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview) repository. 
 
-   The Office Add-in Generator creates a lot of supporting files for add-in projects. Most of these files aren't stored in the sample repository on GitHub, so you'll generate a local project and then overwrite some local files with files from the sample. 
+   The Office Add-in Generator creates a lot of supporting files for add-in projects. Most of these files aren't stored in the sample repository on GitHub, so you'll generate a local project and then overwrite some of its files with sample files. 
 
-## Create and configure the add-in project 
+## Step 2: Create the add-in project and set up the test server
 1. Create a local folder named *onenote-add-in*.
 
 2. Open a **cmd** prompt and navigate to the **onenote-add-in** folder. Run the `yo office` command, as shown below.
@@ -46,11 +41,29 @@ C:\your-local-path\onenote-add-in\> yo office
    | Supported Office applications | (choose any--we'll add a OneNote host later) |
    | Technology to use | HTML, CSS & JavaScript |
 
-4. After the new project is created, delete the **app** folder that was created in the project files.
+4. Open a **cmd** prompt and navigate to the **onenote-add-in** folder. Run the `gulp serve-static` command, as shown below.
 
-5. Copy the **app** folder from the sample files into your **onenote-add-in** folder to replace the one you just deleted.
+   ```
+C:\your-local-path\onenote-add-in\> gulp serve-static
+   ```
 
-6. Open **manifest-onenote-add-in.xml** in your project files using any text editor.
+5. Install the Gulp web server's self-signed certificate as a trusted certificate. You only need to do this the first time you're running the server for add-in projects on your computer.  
+
+   a. Navigate to the hosted add-in page. By default, this is the same URL that's in your manifest:
+
+   ```
+https://localhost:8443/app/home/home.html
+   ```
+
+   b. Install the certificate as a trusted certificate. For more information, see [Adding Self-Signed Certificates as Trusted Root Certificate](https://github.com/OfficeDev/generator-office/blob/master/docs/trust-self-signed-cert.md).
+
+
+## Step 3: Configure the add-in project 
+1. After the new project is created, delete the **app** folder that was created in the project files.
+
+2. Copy the **app** folder from the sample files into your **onenote-add-in** folder to replace the one you just deleted.
+
+3. Open **manifest-onenote-add-in.xml** in your project files using any text editor.
 
    a. Add the following line to the **Hosts** section.
 
@@ -64,26 +77,18 @@ C:\your-local-path\onenote-add-in\> yo office
 <SourceLocation DefaultValue="https://localhost:8443/app/home/grader.html"/>
    ```
 
-## Run the add-in 
-1. Open a **cmd** prompt and navigate to the **onenote-add-in** folder. Run the `gulp serve-static` command, as shown below.
-
-   ```
-C:\your-local-path\onenote-add-in\> gulp serve-static
-   ```
-
-   You'll need to trust the self-signed certificates that are included with the web server so you don't get warnings from the browser.
-
-2. In OneNote Online, open the notebook that the OneNote team created for you. Create a couple pages in the current section. On one page, add a paragraph of content.
+## Step 4: Run the add-in 
+1. In OneNote Online, open the notebook that the OneNote team created for you. Create a couple pages in the current section. On one page, add a paragraph of content.
 
    The sample expects all page content to be in one outline. You can click your content in the OneNote page to display the outline border and verify that your content is in one outline.
 
-3. Choose **Insert > Upload Add-in**. 
+2. Choose **Insert > Upload Add-in**. 
 
    ![Upload Add-in dialog](readme-images/insert-add-ins.png)
 
-4. In the **Upload Add-in** dialog, browse to **manifest-onenote-add-in.xml** in your project files, and then choose **Upload**.
+3. In the **Upload Add-in** dialog, browse to **manifest-onenote-add-in.xml** in your project files, and then choose **Upload**.
 
-5. The add-in opens in an iFrame next to the OneNote page. You can:
+4. The add-in opens in an iFrame next to the OneNote page. You can:
    - Use the **Get stats** button to get approximate word and sentence counts. 
    - Enter scores and a comment, and then choose **Grade it** to add the grade to the page.
    - Choose **Open page** to open the page that's selected in the dropdown.
