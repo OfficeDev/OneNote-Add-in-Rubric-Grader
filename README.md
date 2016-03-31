@@ -42,6 +42,8 @@ C:\your-local-path\onenote add-in\> yo office
    | Supported Office applications | (choose any--we'll add a OneNote host later) |
    | Technology to use | HTML, CSS & JavaScript |
 
+   It takes a few minutes to create the project and add all the supporting files.
+
 4. In the **cmd** prompt, run `gulp serve-static`, as shown below.
 
    ```
@@ -50,7 +52,7 @@ C:\your-local-path\onenote add-in\> gulp serve-static
 
 5. Install the Gulp web server's self-signed certificate as a trusted certificate. You only need to do this the first time you're running the server for add-in projects on your computer.  
 
-   a. Navigate to the hosted add-in page. By default, this is the same URL that's in your manifest:
+   a. In a browser, navigate to the hosted add-in page. By default, this is the same URL that's in your manifest:
 
    ```
 https://localhost:8443/app/home/home.html
@@ -60,11 +62,11 @@ https://localhost:8443/app/home/home.html
 
 
 ## Step 3: Configure the add-in project 
-1. After the new project is created, delete the **app** folder that was created in the project files.
+1. Open the **onenote add-in** folder that you created, and delete the **app** folder from the project files.
 
 2. Copy the **app** folder from the sample files into your **onenote add-in** folder to replace the one you just deleted.
 
-3. Open **manifest-onenote-add-in.xml** in your project files using any text editor.
+3. Open **manifest-onenote-add-in.xml** in the **onenote add-in** folder using any text editor.
 
    a. Add the following line to the **Hosts** section.
 
@@ -91,11 +93,11 @@ https://localhost:8443/app/home/home.html
 
 4. The add-in opens in an iFrame next to the OneNote page. You can:
    - Use the **Get stats** button to get approximate word and sentence counts. 
-   - Enter scores and a comment, and then choose **Grade it** to add the grade to the page.
+   - Set scores in the scoring dropdowns, enter a comment, and then choose **Grade it** to add the grade to the page.
    - Choose **Open page** to open the page that's selected in the dropdown.
 
 ### Troubleshooting and tips 
-- You can debug the add-in using your browser's developer tools. When you're using the Gulp static server and debugging in Internet Explorer or Chrome, you can save your changes locally and then just refresh the add-in's iFrame.
+- You can debug the add-in using your browser's developer tools. When you're using the Gulp web server and debugging in Internet Explorer or Chrome, you can save your changes locally and then just refresh the add-in's iFrame.
 
 - When you inspect a OneNote object, the properties that are currently available for use display actual values. Properties that need to be loaded display *undefined*. Expand the `_proto_` node to see properties that are defined on the object but are not yet loaded.
 
@@ -105,4 +107,5 @@ https://localhost:8443/app/home/home.html
 
 ## Learn more
 
-- [Office Add-ins](https://msdn.microsoft.com/library/office/jj220082.aspx)
+- [OneNote add-ins JavaScript programming overview (Preview)](http://aka.ms/onenote-add-ins)
+- [Office Add-ins](https://dev.office.com/docs/add-ins/overview/office-add-ins)
