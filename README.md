@@ -11,11 +11,11 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 ## Prerequisites
 - A test notebook from the OneNote team. See [OneNote add-ins JavaScript programming overview (Preview)](http://aka.ms/onenote-add-ins) for more information about developing OneNote add-ins during this initial, limited preview period.
 
-- Yeoman Office generator. To install the generator and its prerequisites, follow these [installation instructions](https://dev.office.com/docs/add-ins/get-started/create-an-office-add-in-using-any-editor). After you install the Yeoman Office generator using the npm command, return to this article. 
+- Yeoman Office generator. To install the generator and its prerequisites, follow these [installation instructions](https://dev.office.com/docs/add-ins/get-started/create-an-office-add-in-using-any-editor). After you install the Yeoman Office generator using the npm command, return to this readme. 
 
    The Yeoman Office generator makes it easy to create add-in projects when you don't have Visual Studio or you want to use technologies other than plain HTML, CSS, and JavaScript. It also provides quick access to a local Gulp web server for testing. 
 
-   >You can optionally [use Visual Studio](https://dev.office.com/docs/add-ins/get-started/create-and-debug-office-add-ins-in-visual-studio) to create your project files, and then host the contents of the **app** folder on any HTTPS website. Skip Step 2 below, and point the **SourceLocation** in the manifest to **grader.html** on your website in Step 3.
+   >You can optionally [use Visual Studio](https://dev.office.com/docs/add-ins/get-started/create-and-debug-office-add-ins-in-visual-studio) to create your project files, and then host the contents of the **app** folder on any HTTPS website. If you use this method, skip Step 2 below, and point the **SourceLocation** in the manifest to **grader.html** on your website in Step 3.
 
 ## Step 1: Download the sample
 1. Clone or download the [OneNote-Add-in-Rubric-Grader-Preview](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview) repository. 
