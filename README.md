@@ -105,7 +105,17 @@ https://localhost:8443/app/home/home.html
 
 - You need to enable mixed content in the browser if your add-in uses any HTTP resources. Production add-ins should use only secure HTTPS resources.
 
-## Learn more
+## Questions and comments
+We'd love to get your feedback about this sample. You can send your questions and suggestions to us in the [Issues](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview/issues) section of this repository.
+
+Questions about OneNote development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/onenote-api). Make sure that your questions or comments are tagged with *[onenote-api]*.
+
+You can suggest changes for the OneNote JavaScript API on [UserVoice](https://onenote.uservoice.com/forums/245490-onenote-apis/filters/top).
+  
+## Additional resources
 
 - [OneNote add-ins JavaScript programming overview (Preview)](http://aka.ms/onenote-add-ins)
 - [Office Add-ins](https://dev.office.com/docs/add-ins/overview/office-add-ins)
+
+## Copyright
+Copyright (c) 2016 Microsoft. All rights reserved.
