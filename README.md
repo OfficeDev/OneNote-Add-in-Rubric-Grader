@@ -8,6 +8,8 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 
 ![Rubric Grader task pane add-in in OneNote Online](readme-images/rubric-grader.png) 
 
+>The OneNote add-ins JavaScript API will change frequently while in preview, which may break some sample functionality. Please [log any issues](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview/issues) you encounter when running the sample. 
+
 ## Prerequisites
 - A test notebook from the OneNote team. See [OneNote add-ins JavaScript programming overview (Preview)](http://aka.ms/onenote-add-ins) for more information about developing OneNote add-ins during this initial, limited preview period.
 
@@ -115,7 +117,7 @@ You can suggest changes for the OneNote JavaScript API on [UserVoice](https://on
 ## Additional resources
 
 - [OneNote add-ins JavaScript programming overview (Preview)](http://aka.ms/onenote-add-ins)
-- [Office Add-ins](https://dev.office.com/docs/add-ins/overview/office-add-ins)
+- [Office Add-ins platform overview](https://dev.office.com/docs/add-ins/overview/office-add-ins)
 
 ## Copyright
 Copyright (c) 2016 Microsoft. All rights reserved.
