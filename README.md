@@ -2,9 +2,9 @@
 
 _Applies to: OneNote Online_
 
-The Rubric Grader sample shows you how to use the OneNote JavaScript API (in Preview) in a OneNote task pane add-in. The add-in gets page content, adds an outline to the page, and opens a different page.
+The Rubric Grader sample shows you how to use the OneNote JavaScript API (in preview) in a OneNote task pane add-in. The add-in gets page content, adds an outline to the page, and opens a different page.
 
-The add-in helps teachers to grade writing assignments based on a grading rubric.
+The add-in helps teachers grade writing assignments based on a grading rubric.
 
 ![Rubric Grader task pane add-in in OneNote Online](readme-images/rubric-grader.png) 
 
@@ -13,7 +13,7 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 ## Prerequisites
 - A test notebook from the OneNote team. See [OneNote add-ins JavaScript programming overview (Preview)](http://aka.ms/onenote-add-ins) for more information about developing OneNote add-ins during this initial, limited preview period.
 
-- Yeoman Office generator. To install the generator and its prerequisites, follow these [installation instructions](https://dev.office.com/docs/add-ins/get-started/create-an-office-add-in-using-any-editor). After you install the Yeoman Office generator using the npm command, return to this readme. 
+- Yeoman Office generator. To install the generator and its prerequisites, follow these [installation instructions](https://dev.office.com/docs/add-ins/get-started/create-an-office-add-in-using-any-editor). After you install the Yeoman Office generator by using the npm command, return to this readme. 
 
    The Yeoman Office generator makes it easy to create add-in projects when you don't have Visual Studio or you want to use technologies other than plain HTML, CSS, and JavaScript. It also provides quick access to a local Gulp web server for testing. 
 
@@ -27,12 +27,12 @@ The add-in helps teachers to grade writing assignments based on a grading rubric
 ## Step 2: Create the add-in project and set up the test server
 1. Create a local folder named *onenote add-in*.
 
-2. Open a **cmd** prompt and navigate to the **onenote add-in** folder. Run the `yo office` command, as shown below.
+2. Open a **cmd** prompt and navigate to the **onenote add-in** folder. Run the `yo office` command as shown below.
 
    ```
 C:\your-local-path\onenote add-in\> yo office
    ```
-   >These instructions use the Windows command prompt but are equally applicable for other shell environments. 
+   >These instructions use the Windows command prompt, but are equally applicable for other shell environments. 
 
 3. Use the following options to create the project.
 
@@ -46,7 +46,7 @@ C:\your-local-path\onenote add-in\> yo office
 
    It takes a few minutes to create the project and add all the supporting files.
 
-4. After the project is created, run `gulp serve-static` in the **cmd** prompt, as shown below. This will start the Gulp web server.
+4. After the project is created, run `gulp serve-static` in the **cmd** prompt as shown below. This will start the Gulp web server.
 
    ```
 C:\your-local-path\onenote add-in\> gulp serve-static
@@ -101,7 +101,7 @@ https://localhost:8443/app/home/home.html
 ### Troubleshooting and tips 
 - You can debug the add-in using your browser's developer tools. When you're using the Gulp web server and debugging in Internet Explorer or Chrome, you can save your changes locally and then just refresh the add-in's iFrame.
 
-- When you inspect a OneNote object, the properties that are currently available for use display actual values. Properties that need to be loaded display *undefined*. Expand the `_proto_` node to see properties that are defined on the object but are not yet loaded.
+- When you inspect a OneNote object, the properties that are currently available for use display actual values. Properties that need to be loaded display *undefined*. Expand the `__proto__` node to see properties that are defined on the object, but are not yet loaded.
 
       ![Unloaded OneNote object in the debugger](readme-images/debug.png)
 
