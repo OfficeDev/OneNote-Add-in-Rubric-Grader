@@ -129,10 +129,10 @@
     function openPage() {        
         OneNote.run(function (context) {
             
-            // Get the id and title of the pages in the current section.
+            // Get the pages in the current section.
             var pages = context.application.activeSection.getPages();
             
-            // Queue a command to load the page.            
+            // Queue a command to load the page collection.            
             pages.load('id');
             
             // Run the queued commands, and return a promise to indicate task completion.
