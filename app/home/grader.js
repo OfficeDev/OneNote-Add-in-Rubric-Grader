@@ -75,7 +75,7 @@
             
             // Get the outline on the page.
             // This sample assumes there's only one pageContent on the page with one outline. 
-            var pageContent = pageContents._GetItem(0);
+            var pageContent = pageContents.getItem(0);
             
             // Get the paragraphs in the outline.
             var paragraphs = pageContent.outline.paragraphs;

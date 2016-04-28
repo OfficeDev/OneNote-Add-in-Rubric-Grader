@@ -17,7 +17,7 @@ The add-in helps teachers grade writing assignments based on a grading rubric.
 
    The Yeoman Office generator makes it easy to create add-in projects when you don't have Visual Studio or you want to use technologies other than plain HTML, CSS, and JavaScript. It also provides quick access to a local Gulp web server for testing. 
 
-   >You can optionally [use Visual Studio](https://dev.office.com/docs/add-ins/get-started/create-and-debug-office-add-ins-in-visual-studio) to create your project files, and then host the contents of the **app** folder on any HTTPS website. If you use this method, skip Step 2 below, and point the **SourceLocation** in the manifest to **grader.html** on your website in Step 3.
+   >You can optionally [use Visual Studio](https://dev.office.com/docs/add-ins/get-started/create-and-debug-office-add-ins-in-visual-studio) to create a task pane add-in project, and then host the sample's **app** folder content on any HTTPS website. If you use this method, skip Step 2 below, and point the **SourceLocation** in the manifest to **grader.html** on your website in Step 3.
 
 ## Step 1: Download the sample
 1. Clone or download the [OneNote-Add-in-Rubric-Grader-Preview](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview) repository. 
@@ -87,11 +87,13 @@ https://localhost:8443/app/home/home.html
 
    >If this is the first time you've opened OneNote Online, you may need to refresh the page to see your default notebook.
 
-2. Choose **Insert > **Office Add-ins**, and then choose the **Upload My Add-in** link in the Office Add-ins dialog. 
+2. Choose **Insert > Office Add-ins**to open the Office Add-ins dialog.
 
-3. In the **Upload Add-in** dialog, browse to the **manifest-onenote-add-in.xml** file that you modified in your project files, and then choose **Upload**.
+3. In the Office Add-ins dialog, on the **My Organization** tab, choose the **Upload My Add-in** link. 
 
-4. The add-in opens in an iFrame next to the OneNote page. You can:
+4. In the **Upload Add-in** dialog, browse to **manifest-onenote-add-in.xml** that you modified in your project files, and then choose **Upload**. While testing, your manifest file can be stored locally.
+
+5. The add-in opens in an iFrame next to the OneNote page. You can:
    - Use the **Get count** button to get approximate word and sentence counts. 
    - Set scores in the scoring dropdowns, enter a comment, and then choose **Grade it** to add the grade to the page.
    - Choose **Open page** to open the page that's selected in the dropdown.
