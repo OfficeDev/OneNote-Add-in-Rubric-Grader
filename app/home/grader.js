@@ -32,7 +32,7 @@
         OneNote.run(function (context) {
             
             // Get the id and title of the pages in the current section.
-            var pages = context.application.activeSection.getPages();
+            var pages = context.application.getActiveSection().getPages();
             
             // Queue a command to load the id and title for each page.            
             pages.load('id,title');
@@ -68,7 +68,7 @@
         OneNote.run(function (context) {
         
             // Get the collection of pageContent items from the page.
-            var pageContents = context.application.activePage.getContents();
+            var pageContents = context.application.getActivePage().getContents();
             
             // Queue a command to load the outline property of each pageContent.
             pageContents.load('outline');
@@ -112,7 +112,7 @@
         OneNote.run(function (context) {
             
             // Get the current page.
-            var page = context.application.activePage;
+            var page = context.application.getActivePage();
                        
             // Add an outline with the specified HTML to the page.
             var outline = page.addOutline(560, 70, html);
@@ -130,7 +130,7 @@
         OneNote.run(function (context) {
             
             // Get the pages in the current section.
-            var pages = context.application.activeSection.getPages();
+            var pages = context.application.getActiveSection().getPages();
             
             // Queue a command to load the page collection.            
             pages.load('id');
