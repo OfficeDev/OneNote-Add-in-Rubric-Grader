@@ -11,8 +11,6 @@ The add-in helps teachers grade writing assignments based on a grading rubric.
 >The OneNote add-ins JavaScript API will change frequently while in preview, which may break some sample functionality. Please [log any issues](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview/issues) you encounter when running the sample. 
 
 ## Prerequisites
-- A test notebook from the OneNote team. See [OneNote add-ins JavaScript programming overview (Preview)](http://aka.ms/onenote-add-ins) for more information about developing OneNote add-ins during this initial, limited preview period.
-
 - Yeoman Office generator. To install the generator and its prerequisites, follow these [installation instructions](https://dev.office.com/docs/add-ins/get-started/create-an-office-add-in-using-any-editor). After you install the Yeoman Office generator by using the npm command, return to this readme. 
 
    The Yeoman Office generator makes it easy to create add-in projects when you don't have Visual Studio or you want to use technologies other than plain HTML, CSS, and JavaScript. It also provides quick access to a local Gulp web server for testing. 
@@ -87,13 +85,11 @@ https://localhost:8443/app/home/home.html
 
    >If this is the first time you've opened OneNote Online, you may need to refresh the page to see your default notebook.
 
-2. Choose **Insert > Office Add-ins**to open the Office Add-ins dialog.
+2. Choose **Insert > Upload Add-ins**.
 
-3. In the Office Add-ins dialog, on the **My Organization** tab, choose the **Upload My Add-in** link. 
+3. In the Upload Add-in dialog, browse to **manifest-onenote-add-in.xml** that you modified in your project files, and then choose **Upload**. While testing, your manifest file can be stored locally.
 
-4. In the **Upload Add-in** dialog, browse to **manifest-onenote-add-in.xml** that you modified in your project files, and then choose **Upload**. While testing, your manifest file can be stored locally.
-
-5. The add-in opens in an iFrame next to the OneNote page. You can:
+4. The add-in opens in an iFrame next to the OneNote page. You can:
    - Use the **Get count** button to get approximate word and sentence counts. 
    - Set scores in the scoring dropdowns, enter a comment, and then choose **Grade it** to add the grade to the page.
    - Choose **Open page** to open the page that's selected in the dropdown.
