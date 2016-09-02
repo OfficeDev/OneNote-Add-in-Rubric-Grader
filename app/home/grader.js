@@ -203,7 +203,7 @@
         if (comments) {
             rows += '<tr><td>Comments</td><td><i>' + comments + '</i></td></tr>';
         }
-        addGradeToPage(String.format(table, totalScore/criteria.length*10, rows));
+        addGradeToPage(jQuery.validator.format(table, totalScore/criteria.length*10, rows));
     }
     
     // Reset the scoring UI.
