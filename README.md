@@ -1,14 +1,12 @@
-# Rubric Grader Task Pane Add-in for OneNote Online (Preview)
+# Rubric Grader Task Pane Add-in for OneNote Online
 
 _Applies to: OneNote Online_
 
-The Rubric Grader sample shows you how to use the OneNote JavaScript API (in preview) in a OneNote task pane add-in. The add-in gets page content, adds an outline to the page, and opens a different page.
+The Rubric Grader sample shows you how to use the OneNote JavaScript API in a OneNote task pane add-in. The add-in gets page content, adds an outline to the page, and opens a different page.
 
 The add-in helps teachers grade writing assignments based on a grading rubric.
 
 ![Rubric Grader task pane add-in in OneNote Online](readme-images/rubric-grader.png) 
-
->The OneNote add-ins JavaScript API will change frequently while in preview, which may break some sample functionality. Please [log any issues](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview/issues) you encounter when running the sample. 
 
 ## Prerequisites
 - Yeoman Office generator. To install the generator and its prerequisites, follow these [installation instructions](https://dev.office.com/docs/add-ins/get-started/create-an-office-add-in-using-any-editor). After you install the Yeoman Office generator by using the npm command, return to this readme. 
@@ -18,7 +16,7 @@ The add-in helps teachers grade writing assignments based on a grading rubric.
    >You can optionally [use Visual Studio](https://dev.office.com/docs/add-ins/get-started/create-and-debug-office-add-ins-in-visual-studio) to create a task pane add-in project, and then host the sample's **app** folder content on any HTTPS website. If you use this method, skip Step 2 below, and point the **SourceLocation** in the manifest to **grader.html** on your website in Step 3.
 
 ## Step 1: Download the sample
-1. Clone or download the [OneNote-Add-in-Rubric-Grader-Preview](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview) repository. 
+1. Clone or download the [OneNote-Add-in-Rubric-Grader](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader) repository. 
 
    The Office Add-in Generator creates a lot of supporting files for add-in projects. Most of these files aren't stored in the repository, so you'll generate a local project and then overwrite some local files with sample files. 
 
@@ -81,7 +79,7 @@ https://localhost:8443/app/home/home.html
    ```
 
 ## Step 4: Run the add-in 
-1. In OneNote Online, open the notebook that the OneNote team created for you. Create a couple of pages in the current section. On one page, add a paragraph of content.
+1. In OneNote Online, open a notebook that contains a couple of pages. Make sure at least one page has a paragraph of content.
 
    >If this is the first time you've opened OneNote Online, you may need to refresh the page to see your default notebook.
 
@@ -104,7 +102,7 @@ https://localhost:8443/app/home/home.html
 - You need to enable mixed content in the browser if your add-in uses any HTTP resources. Production add-ins should use only secure HTTPS resources.
 
 ## Questions and comments
-We'd love to get your feedback about this sample. You can send your questions and suggestions to us in the [Issues](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader-Preview/issues) section of this repository.
+We'd love to get your feedback about this sample. You can send your questions and suggestions to us in the [Issues](https://github.com/OfficeDev/oneNote-Add-in-Rubric-Grader/issues) section of this repository.
 
 Questions about OneNote development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/onenote-api). Make sure that your questions or comments are tagged with *[onenote-api]*.
 
@@ -112,7 +110,7 @@ You can suggest changes for the OneNote JavaScript API on [UserVoice](https://on
   
 ## Additional resources
 
-- [OneNote add-ins JavaScript programming overview (Preview)](http://aka.ms/onenote-add-ins)
+- [OneNote add-ins JavaScript programming overview](http://aka.ms/onenote-add-ins)
 - [Office Add-ins platform overview](https://dev.office.com/docs/add-ins/overview/office-add-ins)
 
 ## Copyright
