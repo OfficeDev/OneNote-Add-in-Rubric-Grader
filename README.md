@@ -83,7 +83,11 @@ https://localhost:8443/app/home/home.html
 
    >If this is the first time you've opened OneNote Online, you may need to refresh the page to see your default notebook.
 
-2. Choose **Insert > Upload Add-ins**.
+2. Choose **Insert > Office Add-ins**. This opens the Office Add-ins dialog. 
+  - If you're logged in with your work or school account, choose the **MY ORGANIZATION** tab, and then choose  **Upload My Add-in**.
+  - If you're logged in with your consumer account, choose the **MY ADD-INS** tab, and then choose  **Upload My Add-in**. (In some cases, you might need to choose **Manage My Add-ins > Upload My Add-in**.)
+
+  >**NOTE**: To enable the **Office Add-ins** button, click inside the OneNote page.
 
 3. In the Upload Add-in dialog, browse to **manifest-onenote-add-in.xml** that you modified in your project files, and then choose **Upload**. While testing, your manifest file can be stored locally.
 
