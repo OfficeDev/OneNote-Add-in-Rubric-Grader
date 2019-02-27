@@ -1,3 +1,16 @@
+---
+topic: sample
+products:
+- OneNote
+- Office 365
+languages:
+- JavaScript
+extensions:
+  contentType: samples
+  technologies:
+  - Add-ins
+  createdDate: 3/24/2016 8:29:25 AM
+---
 # Rubric Grader Task Pane Add-in for OneNote Online
 
 _Applies to: OneNote Online_
