@@ -1,10 +1,10 @@
 ---
 topic: sample
 products:
-- OneNote
-- Office 365
+- office-onenote
+- office-365
 languages:
-- JavaScript
+- javascript
 extensions:
   contentType: samples
   technologies:
